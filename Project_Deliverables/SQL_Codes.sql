@@ -1,0 +1,1 @@
+create database credit_card_classification;
