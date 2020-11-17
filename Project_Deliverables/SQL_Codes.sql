@@ -136,9 +136,10 @@ and Household_Size > 2;
 /*/* # 15. Your managers are more interested in customers with a credit rating of high or medium. 
 What is the difference in average balances of the customers with high credit card rating and low credit card rating? */
 
-	select average_balance - average_balance as difference from credit_card_data 
-    where credit_rating in ('High', 'Low')
-	group by credit_rating;
+	select avg(case when credit_rating='High' then average_balance end) - avg(case when credit_rating='Low' then average_balance end)
+    from credit_card_data 
+    where credit_rating in ('High', 'Low');
+
     
 # 16. In the database, which all types of communication (mailer_type) were used and with how many customers?
 	
@@ -147,9 +148,12 @@ What is the difference in average balances of the customers with high credit car
     group by mailer_type;
     
 # 17. Provide the details of the customer that is the 11th least Q1_balance in your database.
-	select *, dense_rank() over ( order by Q1_Balance) as boink
+	select * 
+    from (select *, dense_rank() over ( order by Q1_Balance) as boink
     from credit_card_data
-    where boink = 12;
+    where q1_balance is not null
+    )d
+    where boink = 11;
     
     
 
