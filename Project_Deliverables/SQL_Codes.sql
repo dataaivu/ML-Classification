@@ -64,7 +64,7 @@ please take the average of the column average_balance: */
     The returned result should have only two columns, income level and Average balance of the customers. 
     Use an alias to change the name of the second column. */
 
-select avg(average_balance), income_level as Income from credit_card_data group by income_level;
+select avg(average_balance), income_level as Income from credit_card_data group by 2; 
 
 	/*/* What is the average balance of the customers grouped by number_of_bank_accounts_open? 
     The returned result should have only two columns, number_of_bank_accounts_open and Average balance of the customers. 
@@ -79,7 +79,7 @@ from credit_card_data group by bank_accounts_open;
     Use an alias to change the name of the second column. */
   
 select Credit_Rating as Rating, avg(Credit_Cards_Held) as Credit_Cards 
-from credit_card_data group by credit_rating order by credit_cards DESC;
+from credit_card_data group by credit_rating order by credit_cards DESC; #Ordered to make it intuitive 
 
  /*/* Is there any correlation between the columns credit_cards_held and number_of_bank_accounts_open? 
  You can analyse this by grouping the data by one of the variables and then aggregating the results of the other column. 
@@ -89,6 +89,7 @@ from credit_card_data group by credit_rating order by credit_cards DESC;
     from credit_card_data 
     group by credit_cards_held 
     order by credit_cards_held;
+    
 
 /* 11. Your managers are only interested in the customers with the following properties:
 
@@ -101,7 +102,7 @@ available for them? Can you filter the customers who accepted the offers here? *
 
 CREATE VIEW Priority_Customers AS
 select * from credit_card_data
-where credit_rating = 'medium' or credit_rating = 'high' 
+where (credit_rating = 'medium' or credit_rating = 'high')
 and Credit_Cards_Held < 3 
 and Own_Your_Home = "Yes" 
 and Household_Size > 2;
