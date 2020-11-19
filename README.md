@@ -1,2 +1,7 @@
-# ML Classification
- Machine Learning project to predict customer response for a credit card offer.
+# [Logistic Regression - Machine Learning] (https://github.com/dataaivu/ML-Classification/edit/main/README.md)
+
+### Italic
+Arasan M J
+
+October Cohort, Berlin 20.11.2020
+
