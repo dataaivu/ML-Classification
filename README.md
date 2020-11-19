@@ -11,7 +11,7 @@
  - Database
  - Workflow
  - Organization
- - Links
+ - Tools Used
 
 ## Project Description
 A dataset of 18000 bank customers have been presented. All of them received an offer for credit card while a few accepted and others didn't. 
