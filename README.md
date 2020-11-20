@@ -47,6 +47,8 @@ The repository contains the following files:
 	 - Book1.twb - Tableau workbook with all the requested worksheets and Dashboard
 	 - ML_Classification_Final.ipynb - Jupyter Notebook file with the machine learning model.
 	 - SQL_Codes.sql - SQL queries on the given dataset using MySQL
+	 - Presentation.pptx - Presentation on the overall project
+	 - presentation_recording.mp4 - Voice guided video clip of the prsentation.
  - Resources:
 	 - machine learn end to end helper.pdf - A step-by-step machine learning guide
  - Source_Data:
