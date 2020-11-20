@@ -51,7 +51,6 @@ The repository contains the following files:
 	 - machine learn end to end helper.pdf - A step-by-step machine learning guide
  - Source_Data:
 	 - Contains all the files provided by IronHack for the project.
- - Walkthrough.pdf - A chronological detailed description of the Project.  
 
 ## Tools Used
 
